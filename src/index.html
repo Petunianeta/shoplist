@@ -45,5 +45,19 @@
   <!-- The main bundle js is generated during the build process -->
   <script src="build/main.js"></script>
 
+  <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAwhs65nMYotkJpnIE4mGcl3NGZXufQ0Is",
+      authDomain: "firelist-b9842.firebaseapp.com",
+      databaseURL: "https://firelist-b9842.firebaseio.com",
+      projectId: "firelist-b9842",
+      storageBucket: "firelist-b9842.appspot.com",
+      messagingSenderId: "468611433015"
+    };
+    firebase.initializeApp(config);
+  </script>
+  
 </body>
 </html>

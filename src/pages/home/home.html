@@ -1,14 +1,43 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-navbar>
-</ion-header>
+<!--
+ Generated template for the HomePage page.
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+ See http://ionicframework.com/docs/components/#navigation for more info on
+ Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>ShoppingApp</ion-title>
+  </ion-navbar>
+ 
+ </ion-header>
+ 
+ 
+ <ion-content padding>
+  <ion-item>
+    <ion-label floating>Shopping List</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+ 
+    <button ion-button full (click)="writecuisine ()">Add List</button>
+    <ion-list>
+      <ion-item-sliding *ngFor = "let item of items">
+        <ion-item>
+          {{ item?.name }}
+        </ion-item>
+        <ion-item-options side="right">
+          <button ion-button color="red" (click) = "delete(item?.keyname )">
+            <ion-icon name="trash"></ion-icon>
+            delete
+          </button>
+          <button ion-button color="darkgreen" (click) = "update(item.keyname, item.name)">
+            <ion-icon name="crush"></ion-icon>
+           update
+          </button>
+        </ion-item-options>
+        
+      </ion-item-sliding>
+      
+    </ion-list>
+ 
+ </ion-content>
